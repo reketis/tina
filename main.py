@@ -15,13 +15,13 @@ def executa_comando():
             voz = audio.listen(source)
             comando = audio.recognize_google(voz, language='pt-BR')
             comando = comando.lower()
-            if 'tina' in comando:
-                comando = comando.replace('tina', '')
+            if 'victória' in comando:
+                comando = comando.replace('victória', '')
                 maquina.say(comando)
                 maquina.runAndWait()
 
     except:
-        print('Microfone não está ok')
+        print('Não entendi senhor')
 
     return comando
 
